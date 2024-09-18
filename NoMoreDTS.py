@@ -31,8 +31,8 @@ def manual_input():
 
     if USE_DEFAULT_PATHS == 'y':
         # set by default
-        INPUT_BASE = '/mnt/Beta14/Films/Temp/'
-        OUTPUT_BASE = '/mnt/Beta14/Films/Features/'
+        INPUT_BASE = '/hardcoded/path/to/input/'
+        OUTPUT_BASE = '/hardcoded/path/to/destination/'
         # file specific input
         OUTPUT_DIRECTORY = input(f'Destination path: {OUTPUT_BASE}')
         INPUT_FILE_PATH = input(f'Current path (including extension): {INPUT_BASE}')
@@ -84,8 +84,8 @@ def csv_input():
             for row in reader:
                 OUTPUT_DIRECTORY, INPUT_FILE_PATH, OUTPUT_FILENAME = row
                 # Currently using a default base path
-                OUTPUT_PATH = f"/mnt/Beta14/Films/Features/{OUTPUT_DIRECTORY}"
-                INPUT_PATH = f"/mnt/Beta14/Films/Temp/{INPUT_FILE_PATH}"
+                OUTPUT_PATH = f"/hardcoded/path/to/destination/{OUTPUT_DIRECTORY}"
+                INPUT_PATH = f"/hardcoded/path/to/input/{INPUT_FILE_PATH}"
                 FULL_OUTPUT = f"{OUTPUT_PATH}/{OUTPUT_FILENAME}"
 
                 # Create destination directory
